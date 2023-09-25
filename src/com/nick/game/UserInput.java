@@ -7,8 +7,9 @@ public class UserInput {
 
     // Integer input
     public int intScanner() {
+        System.out.println("Enter a number: ");
         while (!sc.hasNextInt()){
-            System.out.println("Please enter a number.");
+            System.out.println("That's not a number, try again!");
             sc.next();
         }
     return sc.nextInt();

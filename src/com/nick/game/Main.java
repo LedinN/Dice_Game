@@ -21,7 +21,7 @@ public class Main {
      */
 
     public static void main(String[] args) {
-    int i = intScanner();
+    int i = new UserInput().intScanner();
         System.out.println(i);
     }
 
