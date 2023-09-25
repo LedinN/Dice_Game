@@ -17,7 +17,7 @@ public class Main {
         Namn får bara vara String
         Nummer får bara vara integer
     3 relevanta enhetstester?
-
+    test
      */
 
     public static void main(String[] args) {
