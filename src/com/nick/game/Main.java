@@ -21,8 +21,13 @@ public class Main {
      */
 
     public static void main(String[] args) {
-    int i = new UserInput().intScanner();
-        System.out.println(i);
+        System.out.println("How many players?");
+        int spelare = new UserInput().intScanner();
+
+        System.out.println("How many dices should each player have?");
+        int tarningar = new UserInput().intScanner();
+   
+
     }
 
 
