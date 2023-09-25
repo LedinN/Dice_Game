@@ -21,7 +21,8 @@ public class Main {
      */
 
     public static void main(String[] args) {
-
+    int i = intScanner();
+        System.out.println(i);
     }
 
 

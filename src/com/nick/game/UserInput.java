@@ -7,8 +7,11 @@ public class UserInput {
 
     // Integer input
     public int intScanner() {
-
-    return 0; //Placeholder
+        while (!sc.hasNextInt()){
+            System.out.println("Please enter a number.");
+            sc.next();
+        }
+    return sc.nextInt();
     }
 
     // String input
