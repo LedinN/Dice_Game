@@ -1,32 +1,31 @@
 package com.nick.game;
 
 public class Main {
-
-    /*
-    TODO:
-    Antal spelare
-    Antal tärningar
-    Spelares namn
-    Minst 2 spelare
-    Högst poäng vinner
-
-    VG
-    2 vinnare, hantera
-    Scanner i egen klass
-    Hantera att rätt svar kommer in under inmatning
-        Namn får bara vara String
-        Nummer får bara vara integer
-    3 relevanta enhetstester?
-    test
-     */
-
     public static void main(String[] args) {
-        System.out.println("How many players?");
-        int spelare = new UserInput().intScanner();
 
-        System.out.println("How many dices should each player have?");
-        int tarningar = new UserInput().intScanner();
-   
+        System.out.println("Welcome to Dice Game!\n \n [1] Play \n [2] Highscores\n [3] Exit\n");
+
+        int choice = new UserInput().intScanner();
+
+        switch (choice) {
+
+            case 1:
+                new Game().game();
+                break;
+            case 2:
+
+                break;
+            case 3:
+
+                break;
+            default:
+                break;
+
+
+        }
+
+
+
 
     }
 

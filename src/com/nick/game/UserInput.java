@@ -17,7 +17,7 @@ public class UserInput {
 
     // String input
     public String stringScanner() {
-
-        return "placeholder";
+        System.out.println("Type: ");
+        return sc.nextLine();
     }
 }
