@@ -20,4 +20,10 @@ public class UserInput {
         System.out.println("Type: ");
         return sc.nextLine();
     }
+
+    public String pressEnter() {
+        sc.nextLine();
+        System.out.println("Rolling!");
+        return "";
+    }
 }
