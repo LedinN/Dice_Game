@@ -22,10 +22,6 @@ public class Game {
         System.out.println("How many dices should each player have?");
         int dices = new UserInput().intScanner();
 
-        System.out.println("How many rounds do you want to play?");
-        int rounds = new UserInput().intScanner();
-
-        for (int i = 0; i < rounds; i++) {
 
             for (int j = 0; j < players; j++) {
 
@@ -33,7 +29,6 @@ public class Game {
 
                 for (int k = 0; k < dices; k++) {
                     int sum = 0;
-                    new UserInput().pressEnter();
 
                     int score = random.nextInt(6) + 1;
                     System.out.println(playernames[j]+" rolled a "+score);
@@ -55,4 +50,3 @@ public class Game {
 
 
 
-    }

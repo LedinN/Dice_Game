@@ -23,7 +23,6 @@ public class UserInput {
 
     public String pressEnter() {
         sc.nextLine();
-        System.out.println("Rolling!");
         return "";
     }
 }
