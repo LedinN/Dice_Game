@@ -1,38 +1,43 @@
 package com.nick.game;
-
+import java.util.Arrays;
 import java.util.Random;
-
 public class Game {
     Random random = new Random();
     int playerCount;
-    public void game() {
-
+    public static int currentPlayerIndex = 0;
+    int sum;
+    public void game()
+    {
         // HUR MÅNGA SPELARE
-        System.out.println("How many players?");
+        System.out.println("How many players? (2-6)");
          playerCount = new UserInput().intScanner();
-
+         while (playerCount < 2 || playerCount > 6){
+             System.out.println("You need between 2 and 6 players, try again!");
+             playerCount = new UserInput().intScanner();
+         }
 
         for (int i = 0; i < playerCount; i++) {
             System.out.println("Enter the name of Player "+(i+1));
-            new Players(new UserInput().stringScanner(),0);
-            System.out.println(new Players[]+ "\n");
+            new Players(new UserInput().stringScanner(),currentPlayerIndex);
+            System.out.println(Players.playerNames[0][i] + "'s name is: " + Players.playerNames[1][i] + "\n");
+            currentPlayerIndex++;
         }
 
         System.out.println("How many dices should each player have?");
         int dices = new UserInput().intScanner();
-
             for (int j = 0; j < playerCount; j++) {
 
-                System.out.println("It's " + playerData[j][0] + "s turn!\n Press 'Enter' to roll: ");
+                System.out.println("It's " + Players.playerNames[1][j] + "s turn!\n Press 'Enter' to roll: ");
 
                 for (int k = 0; k < dices; k++) {
-
+                    new UserInput().pressEnter();
                     int score = random.nextInt(6) + 1;
-                    System.out.println(playerData[j][0]+" rolled a "+score);
-                    playerData[j][1] += score;
-                    System.out.println("Total points this round: "+playerData[j][1]);
+                    System.out.println(Players.playerNames[1][j]+" rolled a "+score);
+                    sum = sum + score;
                     new UserInput().pressEnter();
                 }
+                System.out.println("Total points: "+sum);
+                sum = 0;
 
             }
 
