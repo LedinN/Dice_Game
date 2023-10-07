@@ -21,8 +21,8 @@ public class UserInput {
         return sc.nextLine();
     }
 
-    public String pressEnter() {
+    public void pressEnter() {
         sc.nextLine();
-        return "";
     }
+
 }
