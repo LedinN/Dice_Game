@@ -1,4 +1,4 @@
-package com.nick.game;
+package com.nick.game.modules;
 
 import java.util.Scanner;
 

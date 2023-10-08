@@ -1,5 +1,8 @@
 package com.nick.game;
 
+import com.nick.game.modules.Game;
+import com.nick.game.modules.UserInput;
+
 public class Main {
     public static void main(String[] args) {
         int choice;
@@ -22,7 +25,6 @@ public class Main {
                     break;
 
             }
-
 
         }
 
