@@ -1,17 +1,4 @@
  /*
     TODO:
-    Antal spelare
-    Antal tärningar
-    Spelares namn
-    Minst 2 spelare
-    Högst poäng vinner
-
-    VG
-    2 vinnare, hantera
-    Scanner i egen klass
-    Hantera att rätt svar kommer in under inmatning
-        Namn får bara vara String
-        Nummer får bara vara integer
-    3 relevanta enhetstester?
-    test
+    Lägg till fler tester?
      */

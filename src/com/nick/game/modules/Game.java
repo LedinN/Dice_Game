@@ -18,7 +18,7 @@ public class Game {
         // SKAPA SPELARE
         for (int i = 0; i < playerCount; i++) {
             System.out.println("Enter the name of Player " + (i + 1));
-            new Methods(new UserInput().stringScanner(), currentPlayerIndex);
+            new Methods(new UserInput().stringScanner());
             System.out.println("Player "+(i+1) + "'s name is: " + Methods.playerNames[i] + "\n");
             currentPlayerIndex++;
         }
@@ -44,10 +44,10 @@ public class Game {
             Methods.highestScore = 0;
             System.out.println("It's a tie between");
             Methods.remainingPlayersList();
-            System.out.println("Sudden death mode active!");
+            System.out.println("Sudden death mode active, 1 dice per player!");
             Methods.clearScores();
             for (int i = 0; i < Methods.remainingPlayers.size(); i++) {
-                System.out.println("It's "+ Methods.playerNames[Methods.remainingPlayers.get(i)]+"s turn!\n Press 'Enter' to roll: ");
+                System.out.println("It's "+ Methods.playerNames[Methods.remainingPlayers.get(i)]+"'s turn!\n Press 'Enter' to roll: ");
                 new UserInput().pressEnter();
                 sum = new Engine().diceRoller(1, Methods.playerNames[Methods.remainingPlayers.get(i)]);
                 Methods.playerScores[Methods.remainingPlayers.get(i)] = sum;
@@ -56,8 +56,8 @@ public class Game {
             Methods.remainingPlayers.clear();
             Methods.highestScore();
             Methods.checkIfTie();
-        }
-            System.out.println("The winner is "+ Methods.highestScorePlayer);
+        } // SKRIV UT VINNARE
+            System.out.println("The winner is: "+ Methods.highestScorePlayer);
 
         }
     }
